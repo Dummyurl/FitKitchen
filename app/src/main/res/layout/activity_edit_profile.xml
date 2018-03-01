@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/userEditProfileActivity_RL">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:id="@+id/linearLayout">
+
+       <include android:id="@+id/toolbar"
+           layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/layout_margin">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/edit_profile_picture_civ"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/placeholder"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#747474"
+                        android:layout_margin="13dp"/>
+
+                </FrameLayout>
+
+                <!--user name-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_name"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="@string/name"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:inputType="text"
+                    android:padding="@dimen/edt_padditng"/>
+
+                <!--user phone no.-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_phone"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="@string/phone"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:inputType="number"
+                    android:padding="@dimen/edt_padditng"/>
+
+                <!--user email id-->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_profile_email"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="@string/email"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/edt_padditng"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/save_profile_btn"
+                    android:text="@string/save"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="2dp"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

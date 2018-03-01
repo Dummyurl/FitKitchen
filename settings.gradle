@@ -1,0 +1,1 @@
+include ':app', ':magicretry-release', ':CustomBrowser-release', ':PayU-release', ':sdkui'

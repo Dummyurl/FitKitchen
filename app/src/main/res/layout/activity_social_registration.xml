@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/phoneNoActivity_RL">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Background image-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/layout_margin">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/food_picky_logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/layout_margin">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/social_name_edt"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="@string/name"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:inputType="text"
+                    android:padding="@dimen/edt_padditng"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/social_email_edt"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="@string/email"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:inputType="text"
+                    android:padding="@dimen/edt_padditng"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/social_phone_no_edt"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="@string/phone"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:inputType="number"
+                    android:padding="@dimen/edt_padditng"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/social_registeration_btn"
+                    android:text="@string/log_in"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

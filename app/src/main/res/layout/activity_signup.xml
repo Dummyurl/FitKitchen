@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signupActivity_RL">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Background image-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/layout_margin">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/food_picky_logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/layout_margin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <!--User name edt-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name_edt"
+            android:background="@drawable/custom_edittext"
+            android:hint="@string/name"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="text"
+            android:padding="@dimen/edt_padditng"/>
+
+        <!--User email edt-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_email_edt"
+            android:background="@drawable/custom_edittext"
+            android:hint="@string/email"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/edt_padditng"/>
+
+        <!--User phone edt-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_phone_edt"
+            android:background="@drawable/custom_edittext"
+            android:hint="@string/phone"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="number"
+            android:padding="@dimen/edt_padditng"/>
+
+        <!--User password edt-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_password_edt"
+            android:background="@drawable/custom_edittext"
+            android:hint="@string/password"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="textPassword"
+            android:padding="@dimen/edt_padditng"/>
+
+        <!--Signup btn-->
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="2dp"/>
+
+        <!--Facebook & google+ buttons layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:paddingBottom="5dp">
+
+            <!--Facebook button-->
+            <FrameLayout
+                android:id="@+id/fb_FL"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fb_signup_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fb_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/radius_button_facebook"
+                    android:text="@string/facebook"
+                    android:drawableLeft="@drawable/fb"
+                    android:paddingLeft="10dp"
+                    android:textColor="#ffffff"/>
+            </FrameLayout>
+
+            <!--Google+ button-->
+            <FrameLayout
+                android:id="@+id/FL_google"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/google_signup_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/google_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/radius_button_google"
+                    android:text="@string/google"
+                    android:drawableLeft="@drawable/g_plus"
+                    android:paddingLeft="10dp"
+                    android:textColor="#ffffff"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:layout_gravity="center_horizontal"/>
+
+            <!--Button login link-->
+            <Button
+                android:id="@+id/login_link_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/trasperent_button"
+                android:text="@string/log_in"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

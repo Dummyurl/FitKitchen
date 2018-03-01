@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/edt_padditng"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/iv_cart_extras_dish_image"
+                android:src="@drawable/background_image"
+                android:layout_gravity="left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_cart_extras_dish_title"
+                android:text="Dish Title"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/iv_cart_extras_dish_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/layout_margin"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_toLeftOf="@+id/iv_delete_cart_item"
+                android:id="@+id/price_container"
+                android:layout_marginRight="@dimen/simple_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs."
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@android:color/black"
+                    android:layout_toLeftOf="@+id/tv_submeal_price"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cart_extras_dish_price"
+                    android:text="200"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_delete_cart_item"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_notification_clear_all"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
